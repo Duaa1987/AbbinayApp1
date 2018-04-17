@@ -1,0 +1,61 @@
+<!--
+  Generated template for the MultiplecancerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>multiplecancer</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-image:url('https://www.codeproject.com/KB/mobile/439871/BackgroundImage.png');background-repeat: no-repeat;background-size: 100% 100%">
+    <ion-list>
+        <ion-item>
+            <ion-label>Select Pollutant </ion-label>
+            <ion-select multiple="true" [(ngModel)]="Pollutant2" placeholder="Pollutant" (ionChange)="getTableVlaues()">
+                <ion-option value="0.0090">Acetaldehyde</ion-option>
+                <ion-option value="0.0000201">Acrolein</ion-option>
+                <ion-option value="0.0020">Acetonitrile</ion-option>
+                <ion-option value="0.000030">Arsenic compounds </ion-option>
+                <ion-option value="0.080">Benzene</ion-option>
+                <ion-option value="0.0000202">Beryllium compounds</ion-option>
+                <ion-option value="0.0020">1,3-Butadiene</ion-option>
+                <ion-option value="0.0000203">Cadmium compounds </ion-option>
+                <ion-option value="0.040">Carbone tetrachloride </ion-option>
+                <ion-option value="0.098">Chloroform </ion-option>
+                <ion-option value="0.00010">Chromium compounds</ion-option>
+                <ion-option value="0.020">1,3-Dichloropropene </ion-option>
+                <ion-option value="0.00080">Ethylene dibromide(1,2-dibromoethane) </ion-option>
+                <ion-option value="2.4">Ethylene dichloride(1,2-dichloroethane) </ion-option>
+                <ion-option value="0.030">Ethylene oxide </ion-option>
+                <ion-option value="0.0098">Formaldehyde </ion-option>
+                <ion-option value="0.0030">Hexachlorobenzene</ion-option>
+                <ion-option value="0.00020">Hydrazine , hydrazine sulfate</ion-option>
+                <ion-option value="0.0015">Lead compounds</ion-option>
+                <ion-option value="0.000050">Manganese compounds </ion-option>
+                <ion-option value="0.00030">Mercury compounds </ion-option>
+                <ion-option value="1.0">Methylene chloride</ion-option>
+                <ion-option value="0.00020">Nickel Compounds</ion-option>
+                <ion-option value="0.0040">Propylene dichloride (1,2-dichloroethane) </ion-option>
+                <ion-option value="0.027">Tetrachloroethylene (perchloroethylene) </ion-option>
+                <ion-option value="0.060">Trichloroethylene(TCE) </ion-option>
+                <ion-option value="0.010">Vinyl chloride </ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+
+    <ion-item *ngFor="let value of res">
+        <ion-label stacked> Pollutant Concentration in ug / m ^3 </ion-label>
+        <ion-input type="number" [(ngModel)]="Concentration[value]" placeholder="Pollutant Concentration"></ion-input>
+    </ion-item>
+    <button ion-button block (click)="calculate()"> Calculate </button>
+
+    <ion-label>Total Carcinogenic Risk probablility  </ion-label>
+    <p>{{total}}</p>
+    <h5>in one million </h5>
+</ion-content>

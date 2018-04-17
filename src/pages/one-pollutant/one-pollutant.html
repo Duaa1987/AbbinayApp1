@@ -1,0 +1,73 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>
+        Carcinogenic - Single Pollutant
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding padding style="background-image:url('https://www.codeproject.com/KB/mobile/439871/BackgroundImage.png');background-repeat: no-repeat;background-size: 100% 100%" >
+   
+    <ion-list>
+        <ion-item>
+            <ion-label>Select Pollutant  </ion-label>
+            <ion-select [(ngModel)]="Pollutant" placeholder ="Pollutant" >
+                <ion-option value="0.0000022">Acetaldehyde (75070)</ion-option>
+                <ion-option value="0.000068">Acrylonitrile (107028) </ion-option>
+                <ion-option value="0.0043">Arsenic compounds </ion-option>
+                <ion-option value="0.0000078">Benzene (71432) </ion-option>
+                <ion-option value="0.024">Beryllium compounds </ion-option>
+                <ion-option value="0.000030">1,3-Butadiene (106990) </ion-option>
+                <ion-option value="0.0018">Cadmium compounds </ion-option>
+                <ion-option value="0.000015">Carbone tetrachloride (56235)</ion-option>
+                <ion-option value="0.000023">Chloroform (67663) </ion-option>
+                <ion-option value="0.012">Chromium  compounds</ion-option>
+                <ion-option value="0.00062">Coke Oven Emissions (8007452)</ion-option>
+                <ion-option value="0.0000040">1,3-Dichloropropene(542756) </ion-option>
+                <ion-option value="0.00022">Ethylene dibromide (1,2-dibromoethane)(106934)</ion-option>
+                <ion-option value="0.000026">Ethylene dichloride (1,2-dichloroethane)(107062)</ion-option>
+                <ion-option value="0.000088">Ethylene oxide(75218)</ion-option>
+                <ion-option value="0.000013">Formaldehyde (50000) </ion-option>
+                <ion-option value="0.00046">Hexachlorobenzene(118741)</ion-option>
+                <ion-option value="0.0049">Hydrazine , hydrazine sulfate(302012)</ion-option>
+                <ion-option value="0.000012">Lead compounds</ion-option>
+                <ion-option value="0.00000047">Methyl chloride(dichloromethane)</ion-option>
+                <ion-option value="0.00048">Nickel Compounds</ion-option>
+                <ion-option value="0.00010">Polychlorinated biphenyls(PCBs)(1336363)</ion-option>
+                <ion-option value="0.000055">Polycyclic organic matter</ion-option>
+                <ion-option value="0.00020">Carcinogenic PAHs:7-PAH </ion-option>
+                <ion-option value="0.000019">Propylene dichloride (1,2-dichloroethane) (78875)</ion-option>
+                <ion-option value="0.0034">Quinoline(91225) </ion-option>
+                <ion-option value="0.000058">1,1,2,2-Tetrachloroethane(79345) </ion-option>
+                <ion-option value="0.0000056">Tetrachloroethylene (perchloroethylene) (127184)</ion-option>
+                <ion-option value="0.0000020">Trichloroethylene(TCE)(79016) </ion-option>
+                <ion-option value="0.0000088">Vinyl chloride(75014)</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+
+    <ion-item>
+        <ion-label stacked> Life Time Average Exposure in  ug / m ^3  </ion-label>
+        <ion-input type="number" [(ngModel)]="Concentration" placeholder ="Life Time Average Exposure"></ion-input>
+    </ion-item>
+
+    <button ion-button block (click)="calculate()"> Calculate </button>
+
+   
+    <ion-label>Total Carcinogenic Risk probablility  </ion-label>
+    <p>{{total}}</p>
+    <h5>in one million </h5>
+
+
+
+    
+</ion-content>
+
+
+
+
+
+
+
