@@ -18,33 +18,33 @@
       <ion-item>
           <ion-label>Select Pollutant </ion-label>
           <ion-select multiple="true" [(ngModel)]="Pollutant2" placeholder="Pollutant" (ionChange)="getTableVlaues()">
-            <ion-option value="0.0090">Acetaldehyde</ion-option>
-            <ion-option value="0.0000201">Acrolein</ion-option>
-            <ion-option value="0.0020">Acetonitrile</ion-option>
-            <ion-option value="0.000030">Arsenic compounds </ion-option>
-            <ion-option value="0.080">Benzene</ion-option>
-            <ion-option value="0.0000202">Beryllium compounds</ion-option>
-            <ion-option value="0.0020">1,3-Butadiene</ion-option>
-            <ion-option value="0.0000203">Cadmium compounds </ion-option>
-            <ion-option value="0.040">Carbone tetrachloride </ion-option>
-            <ion-option value="0.098">Chloroform </ion-option>
-            <ion-option value="0.00010">Chromium compounds</ion-option>
-            <ion-option value="0.020">1,3-Dichloropropene </ion-option>
-            <ion-option value="0.00080">Ethylene dibromide(1,2-dibromoethane) </ion-option>
-            <ion-option value="2.4">Ethylene dichloride(1,2-dichloroethane) </ion-option>
-            <ion-option value="0.030">Ethylene oxide </ion-option>
-            <ion-option value="0.0098">Formaldehyde </ion-option>
-            <ion-option value="0.0030">Hexachlorobenzene</ion-option>
-            <ion-option value="0.00020">Hydrazine , hydrazine sulfate</ion-option>
-            <ion-option value="0.0015">Lead compounds</ion-option>
-            <ion-option value="0.000050">Manganese compounds </ion-option>
-            <ion-option value="0.00030">Mercury compounds </ion-option>
-            <ion-option value="1.0">Methylene chloride</ion-option>
-            <ion-option value="0.00020">Nickel Compounds</ion-option>
-            <ion-option value="0.0040">Propylene dichloride (1,2-dichloroethane) </ion-option>
-            <ion-option value="0.027">Tetrachloroethylene (perchloroethylene) </ion-option>
-            <ion-option value="0.060">Trichloroethylene(TCE) </ion-option>
-            <ion-option value="0.010">Vinyl chloride </ion-option>
+            <ion-option value="Acetaldehyde">Acetaldehyde</ion-option> 
+            <ion-option value="Acrolein">Acrolein</ion-option>
+            <ion-option value="Acetonitrile">Acetonitrile</ion-option>
+            <ion-option value="Arsenic compounds">Arsenic compounds </ion-option>
+            <ion-option value="Benzene">Benzene</ion-option>
+            <ion-option value="Beryllium compounds">Beryllium compounds</ion-option>
+            <ion-option value="1,3-Butadiene">1,3-Butadiene</ion-option>
+            <ion-option value="Cadmium compounds">Cadmium compounds</ion-option>
+            <ion-option value="Carbon tetrachloride">Carbon tetrachloride</ion-option>
+            <ion-option value="Chloroform">Chloroform </ion-option>
+            <ion-option value="Chromium compounds">Chromium compounds</ion-option>
+            <ion-option value="1,3-Dichloropropene">1,3-Dichloropropene </ion-option>
+            <ion-option value="Ethylene dibromide (1,2-dibromoethane)">Ethylene dibromide(1,2-dibromoethane) </ion-option>
+            <ion-option value="Ethylene dichloride (1,2-dichloroethane)">Ethylene dichloride(1,2-dichloroethane) </ion-option>
+            <ion-option value="Ethylene oxide">Ethylene oxide </ion-option>
+            <ion-option value="Formaldehyde">Formaldehyde </ion-option>
+            <ion-option value="Hexachlorobenzene">Hexachlorobenzene</ion-option>
+            <ion-option value="Hydrazine, hydrazine sulfate">Hydrazine , hydrazine sulfate</ion-option>
+            <ion-option value="Lead compounds">Lead compounds</ion-option>
+            <ion-option value="Manganese compounds">Manganese compounds </ion-option>
+            <ion-option value="Mercury compounds">Mercury compounds </ion-option>
+            <ion-option value="Methylene chloride">Methylene chloride</ion-option>
+            <ion-option value="Nickel compounds">Nickel Compounds</ion-option>
+            <ion-option value="Propylene dichloride (1,2-dichloropropane)">Propylene dichloride (1,2-dichloropropane)</ion-option>
+            <ion-option value="Tetrachloroethylene (perchloroethylene)">Tetrachloroethylene (perchloroethylene) </ion-option>
+            <ion-option value="Trichloroethylene (TCE)">Trichloroethylene (TCE)</ion-option>
+            <ion-option value="Vinyl chloride">Vinyl chloride </ion-option>-->
           </ion-select>
       </ion-item>
   </ion-list>
@@ -54,4 +54,11 @@
       <ion-input type="number" [(ngModel)]="Concentration[value]" placeholder="Pollutant Concentration"></ion-input>
   </ion-item>
   <button ion-button block (click)="calculate()"> Calculate </button>
+
+
+  <p>Hazard Index : {{summation}} </p>
+    
+    <p>Target Organ for Chronic Critical Effect : {{key}} </p>
+    <p>Target Organs for Other Chronic Effects  : {{other}} </p>
+    
 </ion-content>
