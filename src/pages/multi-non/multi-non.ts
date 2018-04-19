@@ -215,7 +215,7 @@ export class MultiNonPage {
         }
         
         if(summation>0)
-        console.log("Organ- "+key+' Sum- '+summation ,+other["key"]);
+        console.log("Organ- "+key+' Sum- '+summation ,+other[key]);
        
     }
    }
