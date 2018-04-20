@@ -143,7 +143,7 @@ export class MultiNonPage {
     
    };
 
-   var other = {
+   var pollutant_affect_other_organs = {
       'Acetaldehyde': ['Growth rate', 'blood', 'kidney'],
       'Acrolein': ['Mucous membranes (irritation)'],
       'Acetonitrile': ['Central nervous system (depression)'],
@@ -205,21 +205,35 @@ export class MultiNonPage {
       }
    }
 
+
+   
+
+   var count = 0;
    for(var key in output) {
      if(output.hasOwnProperty(key)){
         var organ_output = output[key];
         var summation = 0;
         for(var i=0;i<organ_output.length;i++) {
           summation = summation + organ_output[i];
-          console.log(other[key]);
         }
         
-        if(summation>0)
-        console.log("Organ- "+key+' Sum- '+summation ,+other[key]);
-       
+        if(summation>0) {
+            console.log("Organ- " + key + ' Hi-Sum: ' + summation);
+        }
+   
+        if(count == 0) { 
+   
+            // Print the other organs affected by the pollutant.
+            for(var i=0; i<pollutants_count; i++) {
+                var pollutant_new = pollutants[i];
+                var other_affected_organs = pollutant_affect_other_organs[pollutant_new];
+                console.log(other_affected_organs.join(',') + ' Hi: '+ parseFloat(pollutant_values[pollutant])); 
+            }
+        }
+        count++;
     }
-   }
 
   }
 
+}
 }
