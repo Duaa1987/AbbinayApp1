@@ -75,5 +75,4 @@ export class MultiplecancerPage implements OnChanges {
     console.log("Sum of (checked*user_input):" + sum);
     this.total=sum*1000000;;
   }
-
 }
